@@ -68,8 +68,8 @@ final class JediManager {
      * @return (uploadResult, null) 
      *      
      */
-    public function uploadVideoData($upToken, $videoKey, $videoData, $params) {
-        return $this->uploadManager->put($upToken, $videoKey, $videoData, params);
+    public function uploadVideoData($upToken, $videoKey, $videoData, $params = null) {
+        return $this->uploadManager->put($upToken, $videoKey, $videoData, $params);
     }
 
      /*
@@ -82,8 +82,8 @@ final class JediManager {
      * @return (uploadResult, null) 
      *      
      */
-    public function uploadVideoFile($upToken, $videoKey, $videoFilePath) {
-        return $this->uploadManager->putFile($upToken, $videoKey, $videoFilePath);
+    public function uploadVideoFile($upToken, $videoKey, $videoFilePath, $params = null) {
+        return $this->uploadManager->putFile($upToken, $videoKey, $videoFilePath, $params);
     }
 
     /*
